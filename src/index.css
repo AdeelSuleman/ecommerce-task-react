@@ -190,3 +190,20 @@ body{
     opacity: 0;
   }
 }
+.topEffect{
+  animation: rotateangle 3s  linear forwards infinite;
+  z-index: -0;
+} 
+@keyframes rotateangle {
+  0%{
+    transform: rotate(-22deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.rect{
+  /* z-index: -1 !important; */
+  /* background: url('../src/assets/Rectangle.png') no-repeat center center; */
+}
