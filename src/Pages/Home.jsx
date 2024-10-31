@@ -19,7 +19,7 @@ const Home = () => {
         <div className='mt-[-10px] '>
             <img src={Vector} alt='Vector' className='w-full h-[160px] z-30'/>
         </div>
-        <div className='p-5 relative bg-red-400 xl:w-[1550px] mx-auto'>
+        <div className='p-5 relative  xl:w-[1550px] mx-auto'>
           <h1 className=' relative p-2 text-center text-[48px] poppins-bold text-white mt-[-7rem] z-20'>
           Mobile <span className='text-[#388FCB]'>Stock</span>
           </h1>
