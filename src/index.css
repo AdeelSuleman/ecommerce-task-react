@@ -202,8 +202,26 @@ body{
     transform: rotate(0deg);
   }
 }
+.people{
+  
+  background: linear-gradient(90deg, #388FCB 0%, #7CC140 100%);
+  -webkit-background-clip: text;
+  color: transparent;
 
-.rect{
-  /* z-index: -1 !important; */
-  /* background: url('../src/assets/Rectangle.png') no-repeat center center; */
+}
+/* .card{
+  background: linear-gradient(180deg, #7CC140 0%, #388FCB 100%);
+  background: orange;
+  border: 1px solid red;
+} */
+.gradient-border {
+  background: linear-gradient(180deg, #7CC140 0%, #388FCB 100%);
+  padding: 4px; /* Yeh border ki thickness hai */
+  border-radius: 8px; /* Optional: Border ko rounded karne ke liye */
+}
+
+.gradient-border-inner {
+  background-color: #F2FBFF; /* Aap isko apne desired background color se replace kar sakte hain */
+  border-radius: 6px; /* Optional: Inner border ko rounded karne ke liye */
+  padding: 30px; /* Aap yeh adjust kar sakte hain */
 }
