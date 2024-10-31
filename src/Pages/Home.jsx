@@ -19,11 +19,11 @@ const Home = () => {
         <div className='mt-[-10px] '>
             <img src={Vector} alt='Vector' className='w-full h-[160px] z-30'/>
         </div>
-        <div className='p-5 relative'>
+        <div className='p-5 relative bg-red-400 xl:w-[1550px] mx-auto'>
           <h1 className=' relative p-2 text-center text-[48px] poppins-bold text-white mt-[-7rem] z-20'>
           Mobile <span className='text-[#388FCB]'>Stock</span>
           </h1>
-          <img src={Vector2} alt='' className=' absolute top-[-6rem] left-[36rem] opacity-90' />
+          <img src={Vector2} alt='' className=' absolute top-[-98px] left-[600px] opacity-90' />
           <p className='text-[20px] text-center mt-10'>
             We stay upto date with latest technology trends and offer innovative solutions. that help<br/>
             you stay ahead in competetion

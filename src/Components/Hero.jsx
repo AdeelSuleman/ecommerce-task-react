@@ -56,15 +56,15 @@ const Hero = () => {
 
   return (
     <>
-      <div className="flex justify-between p-0">
-        <div className=" relative p-0">
+      <div className="flex justify-between p-0 xl:w-[1550px]  lg:w-full mx-auto ">
+        <div className="relative p-0 w-[50%]">
           <img
             src={Topeffect}
             alt=""
             className="absolute top-7 left-[70px] topEffect -rotate-45"
           />
 
-          <h1 className="text-[48px] leading-[72px] font-[700] text-[#388FCB] mt-[100px] ml-[150px] z-50">
+          <h1 className="text-[48px] lg:text-[40px] leading-[72px] font-[700] text-[#388FCB] mt-[100px] ml-[150px] z-50">
             <span className="text-[#333333]">Largest </span>
             <span className="">Wholesalers</span>
             <br />
@@ -73,7 +73,7 @@ const Hero = () => {
             <img
             src={Rect}
             alt=""
-            className="absolute top-[100px] left-[200px] z-[0]"
+            className="absolute top-[100px] left-[168px] z-[0]"
             />
             <p className="relative text-[#388FCB] z-[10]">
               <span className="text-[#333333]">of </span>
@@ -141,28 +141,28 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="mt-20 relative">
+          <div className="mt-20 relative ">
             <img src={Rect813} className="" />
             <img src={Rect777} className="mt-3" />
             <img
               src={Comp}
               alt=""
-              className="mt-[-160px]"
+              className="mt-[-160px] "
             />
           </div>
         </div>
 
-        <div className="p-0">
+        <div className="p-0 relative ">
         
           <img
             src={SmallBubble}
             alt="buubleM"
-            className="absolute BubbleM2 right-[120px] top-[200px] z-10"
+            className="absolute BubbleM2 right-[120px] top-[5px] z-10"
           />
           <img
             src={SmallBubble}
             alt="buubleM"
-            className="absolute BubbleM1 right-[115px] top-[195px] z-10 rotate-6"
+            className="absolute BubbleM1 right-[115px] top-[0px] z-10 rotate-6"
           />
           <img
             src={WhiteBubble}
@@ -172,7 +172,7 @@ const Hero = () => {
           <img
             src={Lbubble}
             alt="Bubble"
-            className=" Bubble rounded-full absolute top-[73px] right-0 "
+            className=" Bubble rounded-full absolute top-[-75px] right-0 "
           />
           
           <div className="relative">

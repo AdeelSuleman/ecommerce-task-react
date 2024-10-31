@@ -25,7 +25,7 @@ const IntroSlider = () => {
     <div className="overflow-hidden w-full absolute bottom-[-13rem]">
       
       <div
-        className="flex gap-5 w-[200%]"
+        className="flex gap-5 "
         style={{
           animation: "scroll 180s linear infinite",
           display: "flex",
