@@ -123,12 +123,17 @@ body{
     border-image: linear-gradient(90deg, #7cc140, #388fcb ) 1;
     border-radius: 20%;
 }
+.menu1{
+  border-bottom: 4px solid red;
+  border-image: linear-gradient(90deg, #7cc140, #388fcb ) 1;
+  border-radius: 20%;
+}
 .hero{
     background: url('./assets/LargeBubble.png') no-repeat  center center;
 }
 .Bubble{
   animation: rotate 30s linear forwards infinite;
-  scale: 1.05;
+  /* scale: 1.05; */
   /* animation-duration: 5.5s;
   animation-delay: 3.3s; */
 }

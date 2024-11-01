@@ -56,15 +56,15 @@ const Hero = () => {
 
   return (
     <>
-      <div className="flex justify-between p-0 xl:w-[1550px]  lg:w-full mx-auto ">
-        <div className="relative p-0 w-[50%]">
+      <div className="flex justify-between p-0 2xl:w-[1550px] lg:w-full  mx-auto bg-lime-100">
+        <div className="relative p-0  xl:w-[50%] lg:w-[70%] bg-red-200">
           <img
             src={Topeffect}
             alt=""
-            className="absolute top-7 left-[70px] topEffect -rotate-45"
+            className="absolute top-7 xl:left-[70px] lg:left-[-0.8%] topEffect -rotate-45"
           />
 
-          <h1 className="text-[48px] lg:text-[40px] leading-[72px] font-[700] text-[#388FCB] mt-[100px] ml-[150px] z-50">
+          <h1 className="text-[48px] lg:text-[40px] leading-[72px] font-[700] text-[#388FCB] mt-[100px] xl:ml-[150px] lg:ml-[15%] z-50">
             <span className="text-[#333333]">Largest </span>
             <span className="">Wholesalers</span>
             <br />
@@ -73,7 +73,7 @@ const Hero = () => {
             <img
             src={Rect}
             alt=""
-            className="absolute top-[100px] left-[168px] z-[0]"
+            className="absolute xl:top-[100px] xl:left-[168px] lg:top-[100px] lg:left-[20%] z-[0]"
             />
             <p className="relative text-[#388FCB] z-[10]">
               <span className="text-[#333333]">of </span>
@@ -85,7 +85,7 @@ const Hero = () => {
           </h1>
           
 
-          <div className=" ml-[150px]">
+          <div className=" ml-[150px] lg:ml-[15%]">
             <p className="poppins-regular mt-10 ">
               Supply that meets Demand. Get the best Wholesale prices of <br />
               used and referbished Mobile Stocks.
@@ -104,7 +104,7 @@ const Hero = () => {
                   name="email"
                   value={inputValue}
                   onChange={handleChange}
-                  className="text-[16px] bg-transparent border-0 placeholder:border-0 active:border-0 focus:border-0 outline-none "
+                  className="text-[16px] bg-transparent border-0 placeholder:border-0 active:bg-transparent  active:border-0 focus:border-0 outline-none "
                 />
               </div>
 
@@ -113,11 +113,17 @@ const Hero = () => {
                 <FiArrowRight />
               </button>
 
-              <button className="bg-[#388FCB] py-3 px-5 border-2 border-transparent flex items-center gap-1 font-semibold text-white rounded-3xl z-10 hover:bg-transparent hover:text-[#388FCB] hover:border-2 hover:border-[#388FCB]">
+              <button className="bg-[#388FCB] py-3 px-5 border-2 border-transparent lg:hidden xl:inline-flex items-center gap-1 font-semibold text-white rounded-3xl z-10 hover:bg-transparent hover:text-[#388FCB] hover:border-2 hover:border-[#388FCB]">
                 <FaArrowDown />
                 Stock List
               </button>
             </div>
+            <div className="">
+            
+            <button className="bg-[#388FCB] xl:hidden lg:inline-flex py-3 mt-4 px-5 border-2 border-transparent  items-center gap-1 font-semibold text-white rounded-3xl z-10 hover:bg-transparent hover:text-[#388FCB] hover:border-2 hover:border-[#388FCB]">
+                <FaArrowDown />
+                Stock List
+            </button>
             <div className="mt-8 gap-7 flex items-center ">
               <div className='flex items-center gap-3'>
                 <Link to=''>
@@ -140,6 +146,7 @@ const Hero = () => {
                 </h1>
               </div>
             </div>
+            </div>
           </div>
           <div className="mt-20 relative ">
             <img src={Rect813} className="" />
@@ -152,45 +159,48 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="p-0 relative ">
+        <div className="p-0 relative bg-pink-300">
         
           <img
             src={SmallBubble}
             alt="buubleM"
-            className="absolute BubbleM2 right-[120px] top-[5px] z-10"
+            className="absolute BubbleM2 xl:right-[120px] lg:right-[35px] top-[5px] z-10 xl:w-[110.72px] lg:w-[80px]"
           />
           <img
             src={SmallBubble}
             alt="buubleM"
-            className="absolute BubbleM1 right-[115px] top-[0px] z-10 rotate-6"
+            className="absolute BubbleM1 xl:right-[115px] lg:right-[30px] top-[0px] z-10 rotate-3 xl:w-[110.72px] lg:w-[80px]"
           />
           <img
             src={WhiteBubble}
             alt="WhiteBubble"
-            className="Bubble1 relative ml-[14px] mt-[-14px] rounded-full w-[95%] opacity-50"
+            className="Bubble1 relative ml-[14px] mt-[-14px] rounded-full w-[90%] lg:w-[87%] opacity-50 "
           />
           <img
             src={Lbubble}
             alt="Bubble"
-            className=" Bubble rounded-full absolute top-[-75px] right-0 "
+            className=" Bubble rounded-full absolute xl:top-[-100px] lg:top-[-90px] right-0 xl:scale-[2] lg:-scale-[5]"
           />
           
           <div className="relative">
             <img
               src={Mudium2}
               alt="buubleM"
-              className="absolute bottom-[12rem] left-40 BubbleM2 opacity-50"
+              className="absolute xl:bottom-[7rem] lg:bottom-[40px] xl:left-[160px] lg:left-[80px] BubbleM2 opacity-50  xl:w-[433.38px] lg:w-[50%]"
             />
             <img
               src={Mudium2}
               alt="buubleM"
-              className="absolute bottom-48 left-36 BubbleM1  opacity-50"
+              className="absolute xl:bottom-[6rem] lg:bottom-[40px] xl:left-[165px] lg:left-[80px] BubbleM1  opacity-50 xl:w-[433.38px] lg:w-[50%]"
             />
           </div>
           <HeroSlider/>
         </div>
       </div>
+      <div className=" py-1 2xl:w-[1550px] mx-auto">
+
       <IntroSlider/>
+      </div>
       {/* <div className=''>
               <img src={Vector} alt='Vector' className='w-full'/>
             </div> */}

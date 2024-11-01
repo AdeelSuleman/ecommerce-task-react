@@ -26,7 +26,7 @@ const HeroSlider = () => {
 
   return (
     <div>
-      <div className="flex  justify-between gap-20 z-50 absolute top-[120px] right-20 w-[550px]">
+      <div className="flex justify-between gap-20 z-50 absolute xl:top-[120px] lg:top-[70px] xl:right-20 lg:right-[50px] xl:w-[530px] lg:w-[370px]">
         <div
           className={`relative transition-transform duration-500 ease-in-out ${
             isTransitioning ? "translate-x-full opacity-0" : "translate-x-0 opacity-100"
@@ -35,7 +35,7 @@ const HeroSlider = () => {
           <img
             src={images[currentIndex]}
             alt="Mobile"
-            className="w-full h-auto"
+            className="xl:w-full xl:h-auto lg:w-[70%]"
           />
         </div>
 
@@ -45,9 +45,9 @@ const HeroSlider = () => {
               <button
                 key={index}
                 onClick={() => handleDotsClick(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ease-in-out ${
+                className={`xl:w-3 xl:h-3 lg:w-2 lg:h-2 rounded-full transition-all duration-300 ease-in-out ${
                   currentIndex === index
-                    ? 'bg-gradient-to-t from-[#388FCB] to-[#7CC140] h-8'
+                    ? 'bg-gradient-to-t from-[#388FCB] to-[#7CC140] xl:h-8 lg:h-7'
                     : 'bg-gray-400'
                 }`}
               ></button>

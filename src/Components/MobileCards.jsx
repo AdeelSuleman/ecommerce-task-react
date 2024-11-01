@@ -1,74 +1,73 @@
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import '../index.css';
 import iphone from '../assets/iphone.png';
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { useState } from 'react';
+// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const MobileCards = () => {
-  const product = [
-    { img: iphone, title: 'Iphone 14 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
-    { img: iphone, title: 'Iphone 14 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
-    { img: iphone, title: 'Iphone 14 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
-    { img: iphone, title: 'Iphone 14 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
-    { img: iphone, title: 'Iphone 14 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
-    { img: iphone, title: 'Iphone 14 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' }
-  ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCards = 4;
-
-  // Handle Next Button
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + visibleCards < product.length ? prevIndex + 1 : prevIndex
-    );
-  };
-
-  // Handle Previous Button
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
-  };
-
+    const responsive = {
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 4,
+          slidesToSlide: 3 // optional, default to 1.
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2,
+          slidesToSlide: 2 // optional, default to 1.
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1,
+          slidesToSlide: 1 // optional, default to 1.
+        }
+      };
+      const product = [
+        { img: iphone, title: 'Iphone Xs Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
+        { img: iphone, title: 'Iphone 11 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
+        { img: iphone, title: 'Iphone 12 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
+        { img: iphone, title: 'Iphone 13 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
+        { img: iphone, title: 'Iphone 14 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
+        { img: iphone, title: 'Iphone 15 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
+        { img: iphone, title: 'Iphone 16 Pro Max', discrp: 'Apple iPhone 14 Pro 512GB Gold (MQ233)' },
+      ];
+  
   return (
-    <div className=''>
-      <div className='flex items-center gap-5 p-1 justify-center mt-10'>
-        {product.slice(currentIndex, currentIndex + visibleCards).map((por, index) => {
-          return (
-            <div key={index} className='gradient-border w-fit p-2'>
-              <div className='gradient-border-inner'>
+    <div className="mt-10 w-[70%] xl:w-[1250px] mx-auto ">
+        <Carousel
+  swipeable={false}
+  draggable={false}
+  showDots={true}
+  responsive={responsive}
+  ssr={true} // means to render carousel on server-side.
+  infinite={true}
+//   autoPlay={this.props.deviceType !== "mobile" ? true : false}
+  autoPlaySpeed={1000}
+  keyBoardControl={true}
+  customTransition="all .5"
+  transitionDuration={500}
+  containerClass="carousel-container"
+  removeArrowOnDeviceType={["tablet", "mobile"]}
+//   deviceType={this.props.deviceType}
+  dotListClass="custom-dot-list-style"
+  itemClass="carousel-item-padding-40-px"
+>
+  {product.map((por, index) => (
+            <div
+              key={index}
+              className={`gradient-border w-fit p-2 transition-transform duration-300 ease-in-out`}
+            >
+              <div className='gradient-border-inner animate-fade-in'>
                 <img src={por.img} alt='' className='mx-auto' />
                 <h2 className='text-[20px] poppins-regular text-center mt-6'>{por.title}</h2>
                 <p className='text-[12px] poppins-regular text-[#888888] text-center mt-2'>{por.discrp}</p>
               </div>
             </div>
-          );
-        })}
-      </div>
-
-      <div className='p-2 flex items-center justify-center mt-8 w-[20%] mx-auto gap-5'>
-        <button onClick={handlePrevious} className='border-2 border-[#7CC140] text-[#7CC140] p-2 rounded-full'>
-          <IoIosArrowBack />
-        </button>
-
-        <div className='flex gap-2 items-center'>
-          {Array.from({ length: Math.ceil(product.length / visibleCards) }, (_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index * visibleCards)}
-              className={`transition-all w-3 h-3 rounded-full ${
-                currentIndex >= index * visibleCards && currentIndex < (index + 1) * visibleCards
-                  ? 'bg-gradient-to-t from-[#388FCB] to-[#7CC140] w-8'
-                  : 'bg-gray-400'
-              }`}
-            ></button>
           ))}
-        </div>
-
-        <button onClick={handleNext} className='border-2 border-[#7CC140] text-[#7CC140] p-2 rounded-full'>
-          <IoIosArrowForward />
-        </button>
-      </div>
+</Carousel>
     </div>
-  );
-};
+  )
+}
 
-export default MobileCards;
+export default MobileCards
