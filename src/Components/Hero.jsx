@@ -56,15 +56,15 @@ const Hero = () => {
 
   return (
     <>
-      <div className="flex justify-between p-0 2xl:w-[1550px] lg:w-full  mx-auto bg-lime-100">
-        <div className="relative p-0  xl:w-[50%] lg:w-[70%] bg-red-200">
+      <div className="flex justify-between p-0 2xl:w-[1550px] lg:w-full  mx-auto ">
+        <div className="relative p-0  xl:w-[50%] lg:w-[70%] md:w-[100%] ">
           <img
             src={Topeffect}
             alt=""
-            className="absolute top-7 xl:left-[70px] lg:left-[-0.8%] topEffect -rotate-45"
+            className="absolute top-7 xl:left-[70px] lg:left-[-0.8%] xl:w-[17%] lg:w-[27%] md:w-[20%] topEffect -rotate-45"
           />
 
-          <h1 className="text-[48px] lg:text-[40px] leading-[72px] font-[700] text-[#388FCB] mt-[100px] xl:ml-[150px] lg:ml-[15%] z-50">
+          <h1 className="text-[48px] lg:text-[40px] md:text-[28px] leading-[72px] font-[700] text-[#388FCB] mt-[100px] lg:mt-[100px] md:mt-[60px] xl:ml-[150px] lg:ml-[15%] md:ml-[13%] z-50">
             <span className="text-[#333333]">Largest </span>
             <span className="">Wholesalers</span>
             <br />
@@ -73,9 +73,9 @@ const Hero = () => {
             <img
             src={Rect}
             alt=""
-            className="absolute xl:top-[100px] xl:left-[168px] lg:top-[100px] lg:left-[20%] z-[0]"
+            className="absolute xl:top-[100px] xl:left-[168px] lg:top-[100px] md:top-[70px] md:left-[17%] lg:left-[20%] xl:w-[30%] lg:w-[50%] md:w-[40%] z-[0]"
             />
-            <p className="relative text-[#388FCB] z-[10]">
+            <p className="relative text-[#388FCB] lg:mt-0 md:mt-[-20px] z-[10]">
               <span className="text-[#333333]">of </span>
               <span className="z-[9999]"> {items[currentIndex]}</span>
               {/* <span className='text-[#388FCB]'>Mobile Phones</span>
@@ -85,17 +85,17 @@ const Hero = () => {
           </h1>
           
 
-          <div className=" ml-[150px] lg:ml-[15%]">
-            <p className="poppins-regular mt-10 ">
-              Supply that meets Demand. Get the best Wholesale prices of <br />
+          <div className=" ml-[150px] lg:ml-[15%] md:ml-[12%] ">
+            <p className="poppins-regular mt-10 md:mt-8 md:text-[13px]">
+              Supply that meets Demand. Get the best Wholesale prices of <br className="hidden lg:inline" />
               used and referbished Mobile Stocks.
             </p>
-            <button className="text-[18px] flex items-center gap-2 mt-6 text-[#388FCB]">
+            <button className="text-[18px] md:text-[15px] flex items-center gap-2 mt-6 md:mt-3 text-[#388FCB]">
               Learn More
               <FiArrowRight className="text-[20px]" />
             </button>
 
-            <div className="mt-6 flex items-center gap-4 z-10">
+            <div className="xl:mt-6 md:mt-4 lg:mt-4 flex items-center gap-4 z-10">
               <div className="border-2 border-[#7CC140] flex items-center gap-2 text-[16px] text-[#888888] p-3 w-fit rounded-3xl">
                 <MdOutlineMail />
                 <input
@@ -104,23 +104,23 @@ const Hero = () => {
                   name="email"
                   value={inputValue}
                   onChange={handleChange}
-                  className="text-[16px] bg-transparent border-0 placeholder:border-0 active:bg-transparent  active:border-0 focus:border-0 outline-none "
+                  className="text-[16px] bg-transparent xl:w-[180px] lg:w-[160px] md:w-[140px] border-0 placeholder:border-0 active:bg-transparent  active:border-0 focus:border-0 outline-none "
                 />
               </div>
 
-              <button className="bg-[#7CC140] py-3 px-5 border-2 border-transparent flex items-center gap-2 font-semibold text-white rounded-3xl hover:bg-transparent hover:text-[#7CC140] hover:border-2 hover:border-[#7CC140]">
+              <button className="bg-[#7CC140] xl:text-base lg:text-[16px] md:text-[14px] py-3 px-5 border-2 border-transparent flex items-center gap-2 font-semibold text-white rounded-3xl hover:bg-transparent hover:text-[#7CC140] hover:border-2 hover:border-[#7CC140]">
                 Subscribe
                 <FiArrowRight />
               </button>
 
-              <button className="bg-[#388FCB] py-3 px-5 border-2 border-transparent lg:hidden xl:inline-flex items-center gap-1 font-semibold text-white rounded-3xl z-10 hover:bg-transparent hover:text-[#388FCB] hover:border-2 hover:border-[#388FCB]">
+              <button className="bg-[#388FCB] xl:text-base lg:text-[16px] md:text-[14px] py-3 px-5 border-2 border-transparent lg:hidden md:hidden xl:inline-flex items-center gap-1 font-semibold text-white rounded-3xl z-10 hover:bg-transparent hover:text-[#388FCB] hover:border-2 hover:border-[#388FCB]">
                 <FaArrowDown />
                 Stock List
               </button>
             </div>
             <div className="">
             
-            <button className="bg-[#388FCB] xl:hidden lg:inline-flex py-3 mt-4 px-5 border-2 border-transparent  items-center gap-1 font-semibold text-white rounded-3xl z-10 hover:bg-transparent hover:text-[#388FCB] hover:border-2 hover:border-[#388FCB]">
+            <button className="bg-[#388FCB] xl:text-base lg:text-[16px] md:text-[14px] xl:hidden lg:inline-flex md:inline-flex py-3 mt-4 px-5 border-2 border-transparent  items-center gap-1 font-semibold text-white rounded-3xl z-10 hover:bg-transparent hover:text-[#388FCB] hover:border-2 hover:border-[#388FCB]">
                 <FaArrowDown />
                 Stock List
             </button>
@@ -140,8 +140,8 @@ const Hero = () => {
                 </Link>
               </div>
               <div className='flex items-center gap-2'>
-                <img src={people} alt="people" className="" />
-                <h1 className="poppins-semibold people">
+                <img src={people} alt="people" className="md:relative" />
+                <h1 className="poppins-semibold people lg:relative lg:right-0 md:absolute md:w-full md:right-[-63%] md:z-10">
                 400k people Registered
                 </h1>
               </div>
@@ -149,27 +149,27 @@ const Hero = () => {
             </div>
           </div>
           <div className="mt-20 relative ">
-            <img src={Rect813} className="" />
-            <img src={Rect777} className="mt-3" />
+            <img src={Rect813} className="xl:w-[50%] lg:w-[60%] md:w-[70%]" />
+            <img src={Rect777} className="mt-3 xl:w-[60%] lg:w-[70%] md:w-[80%]" />
             <img
               src={Comp}
               alt=""
-              className="mt-[-160px] "
+              className="mt-[-160px] xl:w-[30%] md:w-[34%]"
             />
           </div>
         </div>
 
-        <div className="p-0 relative bg-pink-300">
+        <div className="p-0 relative ">
         
           <img
             src={SmallBubble}
             alt="buubleM"
-            className="absolute BubbleM2 xl:right-[120px] lg:right-[35px] top-[5px] z-10 xl:w-[110.72px] lg:w-[80px]"
+            className="absolute BubbleM2 xl:right-[120px] lg:right-[35px]  md:right-[6%] top-[5px] z-10 xl:w-[110.72px] lg:w-[80px] md:w-[70px]"
           />
           <img
             src={SmallBubble}
             alt="buubleM"
-            className="absolute BubbleM1 xl:right-[115px] lg:right-[30px] top-[0px] z-10 rotate-3 xl:w-[110.72px] lg:w-[80px]"
+            className="absolute BubbleM1 xl:right-[115px] lg:right-[30px] md:right-[6%] top-[0px] z-10 rotate-3 xl:w-[110.72px] lg:w-[80px] md:w-[70px]"
           />
           <img
             src={WhiteBubble}
@@ -179,25 +179,25 @@ const Hero = () => {
           <img
             src={Lbubble}
             alt="Bubble"
-            className=" Bubble rounded-full absolute xl:top-[-100px] lg:top-[-90px] right-0 xl:scale-[2] lg:-scale-[5]"
+            className=" Bubble rounded-full absolute xl:top-[-100px] lg:top-[-90px] md:top-[-70px] right-0 xl:scale-[2] lg:-scale-[5]"
           />
           
           <div className="relative">
             <img
               src={Mudium2}
               alt="buubleM"
-              className="absolute xl:bottom-[7rem] lg:bottom-[40px] xl:left-[160px] lg:left-[80px] BubbleM2 opacity-50  xl:w-[433.38px] lg:w-[50%]"
+              className="absolute xl:bottom-[7rem] lg:bottom-[40px] md:bottom-[65px] xl:left-[160px] lg:left-[80px] md:left-[16%] BubbleM2 opacity-50  xl:w-[433.38px] lg:w-[50%] md:w-[42%]"
             />
             <img
               src={Mudium2}
               alt="buubleM"
-              className="absolute xl:bottom-[6rem] lg:bottom-[40px] xl:left-[165px] lg:left-[80px] BubbleM1  opacity-50 xl:w-[433.38px] lg:w-[50%]"
+                className="absolute xl:bottom-[6rem] lg:bottom-[40px] md:bottom-[65px] xl:left-[165px] lg:left-[80px] md:left-[16%] BubbleM1  opacity-50 xl:w-[433.38px] lg:w-[50%] md:w-[42%]"
             />
           </div>
           <HeroSlider/>
         </div>
       </div>
-      <div className=" py-1 2xl:w-[1550px] mx-auto">
+      <div className=" py-3 relative 2xl:w-[1550px]  mx-auto">
 
       <IntroSlider/>
       </div>

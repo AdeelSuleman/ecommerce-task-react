@@ -22,7 +22,7 @@ const IntroSlider = () => {
   }, [Images.length]);
 
   return (
-    <div className="overflow-hidden w-full mt-[-140px]">
+    <div className="overflow-hidden   w-full absolute xl:top-[-180px] lg:top-[-100px] md:top-[-70px]">
       
       <div
         className="flex gap-5 "

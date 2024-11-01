@@ -14,7 +14,7 @@ const MobileCards = () => {
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 2,
+          items: 3,
           slidesToSlide: 2 // optional, default to 1.
         },
         mobile: {
@@ -54,8 +54,8 @@ const MobileCards = () => {
   itemClass="carousel-item-padding-40-px"
 >
   {product.map((por, index) => (
-            <div
-              key={index}
+            <div className="p-2" key={index}>
+            <div 
               className={`gradient-border w-fit p-2 transition-transform duration-300 ease-in-out`}
             >
               <div className='gradient-border-inner animate-fade-in'>
@@ -63,6 +63,7 @@ const MobileCards = () => {
                 <h2 className='text-[20px] poppins-regular text-center mt-6'>{por.title}</h2>
                 <p className='text-[12px] poppins-regular text-[#888888] text-center mt-2'>{por.discrp}</p>
               </div>
+            </div>
             </div>
           ))}
 </Carousel>
